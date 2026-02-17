@@ -1,22 +1,27 @@
-import { View, Text,ActivityIndicator } from 'react-native'
+import { ActivityIndicator, View } from 'react-native'
 import { useRouter } from 'expo-router'
-import {React, useEffect} from 'react'
-import {useAuth } from '../../app/hooks/useAuth'
+import { useEffect } from 'react'
+import { useAuth } from '../../app/_hooks/useAuth'
 
 const UserOnly = ({children}) => {
     const { user } = useAuth();
     const router = useRouter();
 
-    useEffect(()=>{
-        if(user.authChecked && user.authenticated === false){
+    useEffect(() => {
+        if (user.authChecked && user.authenticated === false) {
             router.replace('/login')
-        }else if(!user.authChecked){
-            return <ActivityIndicator size='large'/>
         }
-    },[user.authenticated,user.authChecked])
+    }, [router, user.authenticated, user.authChecked])
+
+    if (!user.authChecked) {
+      return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <ActivityIndicator size='large' />
+        </View>
+      )
+    }
 
   return children
-  
 }
 
 export default UserOnly

@@ -23,7 +23,7 @@ const siteInchargeLayout = () => {
       }}
       >
         <Tabs.Screen 
-          name='home'
+          name='SI-Home'
           options={{
             title: "Home",
             tabBarIcon: ({focused}) => (

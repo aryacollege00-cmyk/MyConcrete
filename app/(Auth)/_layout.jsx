@@ -1,21 +1,21 @@
-import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native'
+import { Text, useColorScheme, View } from 'react-native'
 import React from 'react'
+import { StatusBar } from 'expo-status-bar'
 import { Stack } from 'expo-router'
 import { Colors } from '../../constants/Colors'
 
-import { useAuth } from '../hooks/useAuth'
+import { useAuth } from '../_hooks/useAuth'
 import GuestOnly  from '../../components/Auth/GuestOnly'
 
 const AuthLayout = () => {
 
     const { user } = useAuth()
-    console.log(user)
 
     const Scheme = useColorScheme()
     const theme = Colors[Scheme] ?? Colors.light
   return (
     <GuestOnly>
-    <StatusBar value='auto'/>
+    <StatusBar style='auto'/>
     <Stack screenOptions={{
         headerStyle:{backgroundColor:theme.background},
         headerTintColor: theme.text

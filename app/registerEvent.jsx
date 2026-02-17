@@ -16,13 +16,13 @@ import {
 import { router, useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../constants/Colors';
-import { getEventById } from './services/eventService';
-import { searchUsers, searchTeams, createTeam, requestToJoinTeam } from './services/teamService';
+import { getEventById } from './_services/eventService';
+import { searchUsers, searchTeams, createTeam, requestToJoinTeam } from './_services/teamService';
 import ThemedText from '../components/ThemedText';
 import SearchBar from '../components/SearchBar';
 import { LinearGradient } from 'expo-linear-gradient';
 import Spacer from '../components/Spacer'
-import { useAuth } from './hooks/useAuth';
+import { useAuth } from './_hooks/useAuth';
 import QRCode from 'react-native-qrcode-svg';
 
 const RegisterEvent = () => {

@@ -14,12 +14,12 @@ import React, { useState, useEffect } from 'react';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../../constants/Colors';
-import { getEvents } from '../services/eventService'; 
+import { getEvents } from '../_services/eventService'; 
 import ThemedText from '../../components/ThemedText';
-import { getEventByUserId } from '../services/eventService'; 
+import { getEventByUserId } from '../_services/eventService'; 
 
 
-import { useAuth } from '../hooks/useAuth';  
+import { useAuth } from '../_hooks/useAuth';  
 
 const Event = () => {
   const [activeTab, setActiveTab] = useState('all');
