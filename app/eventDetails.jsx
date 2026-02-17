@@ -4,7 +4,7 @@ import { useLocalSearchParams, router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../constants/Colors';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { getEventById } from './services/eventService';
+import { getEventById } from './_services/eventService';
 
 import ThemedView from '../components/ThemedView';
 import ThemedText from '../components/ThemedText';

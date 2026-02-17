@@ -1,8 +1,8 @@
-import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
+import { StyleSheet, StatusBar, useColorScheme } from 'react-native';
 import { Stack } from 'expo-router';
 import { Colors } from '../constants/Colors';
-import { AuthProvider } from './contexts/AuthContext';
-import { useAuth } from './hooks/useAuth';
+import { AuthProvider } from './_contexts/AuthContext';
+import { useAuth } from './_hooks/useAuth';
 
 function RootLayout() {
   return (
@@ -19,7 +19,10 @@ export const Layout = () => {
 
   return (
     <>
-      <StatusBar value='auto' />
+      <StatusBar
+        barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
+        backgroundColor={theme.background}
+      />
       <Stack
         screenOptions={{
           headerStyle: { backgroundColor: theme.background },
@@ -30,7 +33,7 @@ export const Layout = () => {
         {user.authenticated ? (
           <Stack.Screen name='(dashboard)' options={{ headerShown: false }} />
         ) : (
-          <Stack.Screen name='(auth)' options={{ headerShown: false }} />
+          <Stack.Screen name='(Auth)' options={{ headerShown: false }} />
         )}
       </Stack>
     </>

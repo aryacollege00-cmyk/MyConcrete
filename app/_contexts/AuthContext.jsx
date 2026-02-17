@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { registerAccount, loginAccount, getUserById } from '../services/authService';
+import { registerAccount, loginAccount, getUserById } from '../_services/authService';
 import api from '../../lib/axios';
 import * as SecureStore from 'expo-secure-store';
 import AsyncStorage from '@react-native-async-storage/async-storage';

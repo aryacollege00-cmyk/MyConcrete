@@ -9,11 +9,11 @@ import ThemedView from '../../components/ThemedView';
 import ThemedText from '../../components/ThemedText';
 import ThemedButton from '../../components/ThemedButton';
 import Spacer from '../../components/Spacer';
-import { getEvents } from '../services/eventService';
+import { getEvents } from '../_services/eventService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ImageBackground } from 'react-native';
 
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../_hooks/useAuth';
 
 const Home = () => {
   const statusBarHeight = Platform.OS === 'android' ? StatusBar.currentHeight || 24 : 44;

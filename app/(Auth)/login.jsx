@@ -3,7 +3,7 @@ import { View, TextInput, Text, StyleSheet, TouchableOpacity, TouchableWithoutFe
 import { router, Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../../constants/Colors';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../_hooks/useAuth';
 import Spacer from '../../components/Spacer';
 
 export default function Login() {
