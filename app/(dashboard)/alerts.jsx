@@ -13,10 +13,10 @@ import {
 import React, { useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Colors } from '../../constants/Colors'
-import { getAlerts } from '../services/alertService'
+import { getAlerts } from '../_services/alertService'
 import ThemedView from '../../components/ThemedView'
 import ThemedText from '../../components/ThemedText'
-import { useAuth } from '../hooks/useAuth'
+import { useAuth } from '../_hooks/useAuth'
 import { Ionicons } from '@expo/vector-icons'
 
 const profileImg = 'https://randomuser.me/api/portraits/men/1.jpg'

@@ -1,9 +1,8 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
 import React, { useEffect } from 'react';
 import { router } from 'expo-router';
-import { useAuth } from './hooks/useAuth';
-import api from '../lib/axios'
-import { testApi } from './services/authService'
+import { useAuth } from './_hooks/useAuth';
+import { testApi } from './_services/authService'
 import Svg, { Path, Defs, LinearGradient, Stop } from 'react-native-svg';
 
 // MyConcrete Logo Component
@@ -49,16 +48,17 @@ const MyConcreteLogoSVG = ({ width = 200, height = 120 }) => (
 const Home = () => {
   const { user } = useAuth();
 
-  useEffect(()=>{
-    console.log("testing api ")
-    try{
-      const resp = testApi();
+  useEffect(() => {
+    const checkApi = async () => {
+      try {
+        await testApi();
+      } catch (error) {
+        console.log('error caught in index');
+      }
+    };
 
-    }catch(error){
-      console.log("error caught in index")
-    }
-
-  })
+    checkApi();
+  }, [])
 
   const handleGetStarted = () => {
     if (user?.authenticated) {

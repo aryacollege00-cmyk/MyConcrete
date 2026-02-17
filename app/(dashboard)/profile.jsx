@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react'
 import { router } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 import { Colors } from '../../constants/Colors'
-import { getEventByUserId } from '../services/eventService'
+import { getEventByUserId } from '../_services/eventService'
 
 import ThemedView from '../../components/ThemedView'
 import ThemedText from '../../components/ThemedText'
-import { useAuth } from '../hooks/useAuth'
+import { useAuth } from '../_hooks/useAuth'
 
 const Profile = () => {
   const statusBarHeight = Platform.OS === 'android' ? StatusBar.currentHeight || 24 : 44

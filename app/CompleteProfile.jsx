@@ -3,7 +3,7 @@ import { View, TextInput, Text, StyleSheet, TouchableOpacity, ScrollView,Activit
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../constants/Colors';
-import { updateUser } from './services/authService';
+import { updateUser } from './_services/authService';
 
 export default function CompleteProfile() {
   const [firstname, setFirstname] = useState('');

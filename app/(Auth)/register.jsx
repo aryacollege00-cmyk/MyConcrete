@@ -6,7 +6,7 @@ import ThemedView from '../../components/ThemedView';
 import Spacer from '../../components/Spacer';
 import { Colors } from '../../constants/Colors';
 import ThemedText from '../../components/ThemedText';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../_hooks/useAuth';
 
 export default function Register() {
   const [username, setUsername] = useState('');

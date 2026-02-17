@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Modal, TextInput, KeyboardAvo
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams } from "expo-router";
-import { verifyAccount } from '../services/authService';
+import { verifyAccount } from '../_services/authService';
 import { Colors } from '../../constants/Colors';
 
 export default function Verify() {
