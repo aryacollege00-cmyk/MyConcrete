@@ -1,4 +1,6 @@
 import { StyleSheet, StatusBar, useColorScheme } from 'react-native';
+import { StyleSheet, useColorScheme } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { Stack } from 'expo-router';
 import { Colors } from '../constants/Colors';
 import { AuthProvider } from './_contexts/AuthContext';
@@ -19,10 +21,7 @@ export const Layout = () => {
 
   return (
     <>
-      <StatusBar
-        barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
-        backgroundColor={theme.background}
-      />
+      <StatusBar style='auto' />
       <Stack
         screenOptions={{
           headerStyle: { backgroundColor: theme.background },
