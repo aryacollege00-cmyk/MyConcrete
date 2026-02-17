@@ -1,3 +1,4 @@
+import { StyleSheet, StatusBar, useColorScheme } from 'react-native';
 import { StyleSheet, useColorScheme } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Stack } from 'expo-router';
